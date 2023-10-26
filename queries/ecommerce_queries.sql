@@ -11,7 +11,18 @@ CREATE TABLE ecommerce_data (
     Country VARCHAR(50)
 );
 
+-- Convert the InvoiceDate Column:
+-- In Excel: Select the InvoiceDate column.
+-- Right-click and choose 'Format Cells'.
+-- Under the 'Number' tab, select 'Custom'.
+-- Type in the format yyyy-mm-dd hh:mm:ss and click OK.
+-- Excel will now display the dates in the desired format. If there's an issue with any date, you'll have to correct it manually.
+-- In Google Sheets:
+-- Select the InvoiceDate column.
+-- Format > Number > More Formats > More date and time formats.
+-- Choose or create the custom format yyyy-mm-dd hh:mm:ss.
 -- Convert to latin1 or utf8mb4 for compatibility if necessary:
+
 ALTER TABLE ecommerce_data CONVERT TO CHARACTER SET utf8mb4;
 
 -- Load data from csv file into MySQL
@@ -81,3 +92,39 @@ WHERE TotalSales > (SELECT AVG(TotalSales) + 2 * STD(TotalSales) FROM DailySales
 SELECT CustomerID, StockCode, InvoiceDate, Quantity
 FROM ecommerce_data
 WHERE Quantity > 1000;
+
+-- Total sales by month
+SELECT
+    YEAR(InvoiceDate) AS Year,
+    MONTH(InvoiceDate) AS Month,
+    SUM(UnitPrice * Quantity) AS TotalSales
+FROM ecommerce_data
+GROUP BY YEAR(InvoiceDate), MONTH(InvoiceDate)
+ORDER BY Year, Month;
+
+-- Average spend per customer
+SELECT
+    CustomerID,
+    AVG(UnitPrice * Quantity) AS AvgSpend
+FROM ecommerce_data
+GROUP BY CustomerID;
+
+-- Top customers by total purchase value
+SELECT
+    CustomerID,
+    SUM(UnitPrice * Quantity) AS TotalPurchaseValue
+FROM ecommerce_data
+GROUP BY CustomerID
+ORDER BY TotalPurchaseValue DESC;
+
+-- Products frequently out of stock
+SELECT
+    StockCode,
+    COUNT(*) AS OutOfStockCount
+FROM ecommerce_data
+WHERE Quantity <= 0
+GROUP BY StockCode
+ORDER BY OutOfStockCount DESC;
+
+
+

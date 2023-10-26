@@ -1,0 +1,1 @@
+-- Some general queries for cleaning the ecommerce data set from Kaggle.com
