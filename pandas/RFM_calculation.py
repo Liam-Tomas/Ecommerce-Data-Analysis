@@ -1,9 +1,13 @@
+# This code retrieves data from a MySQL database using SQLAlchemy and stores it in a Pandas DataFrame.
+# It calculates quartiles (percentiles) for the Recency, Frequency, and Monetary values based on the data in the DataFrame.
+# It assigns customer segments (Low, Medium, or High) based on the quartiles to each customer in the DataFrame.
+# It inserts the segmented data back into a MySQL table named "RFM_Segmented."
+
 import pandas as pd
 from sqlalchemy import create_engine
 
 # Set up a connection to your MySQL database
 db_url = 'mysql://root:ElTea1994!@localhost:3306/ecommerce'
-
 engine = create_engine(db_url)
 
 # Load data from MySQL into a DataFrame
