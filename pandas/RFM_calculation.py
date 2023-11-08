@@ -34,7 +34,6 @@ M25, M50, M75 = quartiles['Monetary'][0.25], quartiles['Monetary'][0.50], quarti
 M10 = quartiles['Monetary'][0.10]
 M90 = quartiles['Monetary'][0.90]
 
-
 # Create a new column in your DataFrame to store the segment for each customer
 data['Segment'] = 'Low'  # Initialize all customers to 'Low' segment
 data['MonetarySegment'] = 'Low-Value Customer'  # Initialize all customers to 'Low-Value Customer' segment
@@ -60,5 +59,3 @@ data.loc[(data['Monetary'] > M10) & (data['Monetary'] < M90), 'MonetarySegment']
 data.to_sql('RFM_Segmented', con=engine, if_exists='replace', index=False)
 
 print("Data has been inserted into RFM_Segmented table.")
-
-

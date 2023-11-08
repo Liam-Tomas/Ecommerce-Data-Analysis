@@ -24,8 +24,6 @@ FROM DailySales
 WHERE TotalSales > (SELECT AVG(TotalSales) + 2 * STD(TotalSales) FROM DailySales);
 
 
-
-
 -- Unusual purchase behavior:
 -- Example: customers buying more than 1000 units of a product in one purchase.)
 SELECT CustomerID, StockCode, InvoiceDate, Quantity
@@ -58,13 +56,18 @@ ORDER BY TotalPurchaseValue DESC;
 
 
 -- Products frequently out of stock
+CREATE VIEW OutOfStock AS
 SELECT
-    StockCode,
+    ed.StockCode,
+    ed.Description,
     COUNT(*) AS OutOfStockCount
-FROM ecommerce_data
-WHERE Quantity <= 0
-GROUP BY StockCode
+FROM ecommerce_data AS ed
+WHERE ed.Quantity <= 0
+GROUP BY ed.StockCode, ed.Description
+HAVING OutOfStockCount >= 10
 ORDER BY OutOfStockCount DESC;
+
+
 
 -- Monthly / Seasonal Sales Data:
 DROP TABLE SeasonalSales;
