@@ -30,13 +30,6 @@ This project provides valuable insights for eCommerce businesses, enabling them 
 ## Project Showcase
 Explore the interactive Tableau dashboards and SQL queries used in this project to gain insights into eCommerce data and sales trends.
 
-![Alt text](/images/salesIMG.jpg)
-[*Click here for interactive dashboard*](URL to Tableau Public dashboard)
-
-![Alt text](/images/rfmIMG.jpg)
-
-![Alt text](/images/productsIMG.jpg)
-
-![Alt text](/images/regionalIMG.jpg)
+![Alt text](/images/dashboardIMG.jpg)
 
 

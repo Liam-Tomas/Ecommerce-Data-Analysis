@@ -9,7 +9,6 @@
 -- - - I am using three segments for simplicity: "Low," "Medium," and "High."
 
 -- Step 1: Calculate RFM Values and Store in MySQL Database
-USE ecommerce;
 -- Data Preprocessing: Aggregates the data to create a single table for each customer, summarizing their total purchase value, transaction count, and recency.
 -- It calculates the following metrics for each customer:
 -- - LastPurchaseDate: The date of their most recent purchase.
@@ -17,6 +16,7 @@ USE ecommerce;
 -- - TotalPurchaseValue: The total purchase value (monetary value) of all their transactions.
 -- This aggregated data serves as the basis for further RFM (Recency, Frequency, Monetary) analysis and customer segmentation.
 -- Used for calculating quartiles in the Python script @ RFM_calculation.py
+
 CREATE TABLE RFM_Aggregated AS
 SELECT
     CustomerID,
