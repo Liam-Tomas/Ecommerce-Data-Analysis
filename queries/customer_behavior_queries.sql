@@ -1,5 +1,4 @@
--- Customer Behavior Queries
--- - These queries give insights into customer behaviors
+-- Customer Behavior Queries: These queries give insights into customer behaviors
 
 -- Average spending per customer
 SELECT
