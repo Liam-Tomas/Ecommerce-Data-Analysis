@@ -1,7 +1,7 @@
-# eCommerce Data Analysis and Sales Insights
+# Ecommerce Data Analysis and Sales Insights
 
 ## Project Summary
-This project involves the comprehensive analysis of an eCommerce dataset to extract valuable insights, trends, and business intelligence. The dataset contains transactional data from an eCommerce platform, including information on customer behavior, product sales, and order details. By applying SQL queries, data manipulation, and visualization techniques, this project aims to provide meaningful business insights, identify sales trends, and support data-driven decision-making.
+This project involves the comprehensive analysis of an ecommerce dataset to extract valuable insights, trends, and business intelligence. The dataset contains transactional data from an ecommerce platform, including information on customer behavior, product sales, and order details. By applying SQL queries, data manipulation, and visualization techniques, this project aims to provide meaningful business insights, identify sales trends, and support data-driven decision-making.
 
 ## Key Objectives
 - **Data Exploration**: The project starts with exploratory data analysis to understand the dataset's structure, identify data quality issues, and prepare it for analysis.
@@ -18,7 +18,7 @@ This project involves the comprehensive analysis of an eCommerce dataset to extr
 - **Data Visualization**: Insights are presented using Tableau, creating interactive dashboards and visualizations for effective data communication.
 
 ## Project Impact
-This project provides valuable insights for eCommerce businesses, enabling them to make data-driven decisions. It supports targeted marketing efforts, inventory management, and the identification of growth opportunities. The interactive Tableau dashboards make it easy for stakeholders to explore and understand the data.
+This project provides valuable insights for ecommerce businesses, enabling them to make data-driven decisions. It supports targeted marketing efforts, inventory management, and the identification of growth opportunities. The interactive Tableau dashboards make it easy for stakeholders to explore and understand the data.
 
 ## Tools and Technologies Used
 - **SQL** for data querying and manipulation.
@@ -28,7 +28,7 @@ This project provides valuable insights for eCommerce businesses, enabling them 
 - **Kaggle** eCommerce dataset for analysis.
 
 ## Project Showcase
-Explore the interactive Tableau dashboards and SQL queries used in this project to gain insights into eCommerce data and sales trends.
+Check out the the screenshot of the Tableau dashboard created to explore the data and sales trends (published interactive dashboard is still being finished).
 
 ![Alt text](/images/dashboardIMG.jpg)
 
