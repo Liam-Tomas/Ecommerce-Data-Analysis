@@ -6,11 +6,11 @@
 import pandas as pd
 from sqlalchemy import create_engine
 
-# Set up a connection to your MySQL database
+# Set up connection to the MySQL database
 db_url = 'mysql://root:ElTea1994!@localhost:3306/ecommerce'
 engine = create_engine(db_url)
 
-# Load data from MySQL into a DataFrame
+# Load data from MySQL into a Pandas DataFrame
 query = """
     SELECT CustomerID, 
            DATEDIFF(NOW(), LastPurchaseDate) AS Recency, 
